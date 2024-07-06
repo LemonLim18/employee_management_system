@@ -7,6 +7,7 @@ const Table = ({ employees, handleEdit, handleDelete }) => {
     currency: 'USD',
     minimumFractionDigits: null,
   });
+  // console.log("Employees in table: ", employees)
 
   return (
     <div className="contain-table">
@@ -25,7 +26,9 @@ const Table = ({ employees, handleEdit, handleDelete }) => {
           </tr>
         </thead>
         <tbody>
-          {employees ? (
+          {employees ? 
+          // if got employees or done loading
+          (
             employees.map((employee, i) => (
               <tr key={employee.id}>
                 <td>{employee.id}</td>
@@ -52,9 +55,11 @@ const Table = ({ employees, handleEdit, handleDelete }) => {
                 </td>
               </tr>
             ))
-          ) : (
+          ) : 
+          // if no employees or loading
+          (
             <tr>
-              <td colSpan={7}>No Employees</td>
+              <td colSpan={7}></td>
             </tr>
           )}
         </tbody>

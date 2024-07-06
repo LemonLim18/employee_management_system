@@ -9,6 +9,7 @@ const Add = ({ employees, setEmployees, setIsAdding }) => {
   const [salary, setSalary] = useState('');
   const [date, setDate] = useState('');
 
+  // Add new employee
   const handleAdd = e => {
     e.preventDefault();
 
