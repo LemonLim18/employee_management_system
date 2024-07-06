@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+ import React, { useState } from 'react';
 import Swal from 'sweetalert2';
 
+// pass the usestate and the set functions to the Add page so that they can be used here
 const Add = ({ employees, setEmployees, setIsAdding }) => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
