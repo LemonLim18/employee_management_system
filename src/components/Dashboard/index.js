@@ -21,6 +21,7 @@ const Dashboard = ({ setIsAuthenticated }) => {
   const [isAdding, setIsAdding] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
 
+  // Update the local employees state with the latest data from the firestore database
   const getEmployees = async() => {
     // get the whole documents from the specified collection(table) in the firestore(database) & store it inside the querySnapshot
     // Note that the querySnapshot is only a metadata, thus not directly applicable
@@ -99,6 +100,7 @@ const Dashboard = ({ setIsAuthenticated }) => {
           employees={employees}
           setEmployees={setEmployees}
           setIsAdding={setIsAdding}
+          getEmployees={getEmployees}
         />
       )}
       {/* can be deemed as if(isEditing) { editPage } */}
